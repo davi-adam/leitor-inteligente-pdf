@@ -1,6 +1,6 @@
 from services.pdf_reader import extrair_texto_pdf
 from services.extratores import (
-    indentificar_tipo_documento,
+    identificar_tipo_documento,
     extrair_cnpj,
     extrair_porcentagem,
     extrair_vigencia
@@ -11,7 +11,7 @@ def main():
 
     texto = extrair_texto_pdf(caminho)
     
-    tipo = indentificar_tipo_documento(texto)
+    tipo = identificar_tipo_documento(texto)
     cnpjs = extrair_cnpj(texto)
     porcentagens = extrair_porcentagem(texto)
     vigencia = extrair_vigencia(texto)
